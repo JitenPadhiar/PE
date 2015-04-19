@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
     </head>
     <body>
         
@@ -27,7 +27,7 @@
             <sql:param value="${param.price}" />
         </sql:update>
         <c:if test="${count>=1}">
-            <font size="5" color='green'> Congratulations ! Data updated
+            <font size="5" color='green'> Data updated
             successfully.</font>
               <a href="welcome.jsp">Go Home</a>          
         </c:if>

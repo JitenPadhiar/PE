@@ -22,15 +22,14 @@ public class Login {
         PreparedStatement pst = null;  
         ResultSet rs = null;  
   
-        String url = "jdbc:mysql://localhost/";  
-        String dbName = "member";  
+        String url = "jdbc:mysql://localhost/member";  
         String driver = "com.mysql.jdbc.Driver";  
         String userName = "root";  
         String password = "";  
         try {  
             Class.forName(driver).newInstance();  
             conn = (Connection) DriverManager  
-                    .getConnection(url + dbName, userName, password);  
+                    .getConnection(url, userName, password);  
   
             pst = (PreparedStatement) conn  
                     .prepareStatement("select username,password from member where username=? and password=?");  

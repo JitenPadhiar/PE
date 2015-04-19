@@ -14,7 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
         <script src="js/prefixfree.min.js"></script>
          <style>
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -238,7 +238,7 @@ body{
         <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
-            <div>Personal<span></br>Expense<span>Manager</br></span></div>
+            <div>Personal<span></br>Expense</br><span>Manager</span></div>
         </div>
        
         <div class="login">
@@ -247,7 +247,7 @@ body{
                 <input type="password" name="password" placeholder="password" required/></br>
                 <input type="submit" value="Login"/></br>
                 <input type="reset" value="Reset" /></br></br>
-                <a href="reg.jsp" >SignUp</a>
+                <a href="reg.jsp" >New user? Register Here!</a>
          </div>
          </form>
     <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>    

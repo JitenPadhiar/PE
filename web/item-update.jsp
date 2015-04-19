@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="table.css" type="text/css" />  
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
         <style>
             body {
                 background-image:url("BackgroundTULIP.jpg");
@@ -69,10 +69,10 @@
 
             <form action="update.jsp" method="post">
                 <table>
-                    <tr> <td colspan="3">Update Product</td></tr>
+                    <tr> <td colspan="3">Update Item Here!</td></tr>
                     <tr>
-                        <td>Product Name</td>
-                        <td >Price</td>
+                        <td>Item Name</td>
+                        <td >Item Price</td>
                         <td colspan="3">Action</td>
                     </tr>
                     <c:forEach var="row" items="${result.rows}">

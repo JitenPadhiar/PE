@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="table.css" type="text/css" />
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
         <style>
             body{
                  background-image:url("canada_day_1.gif");

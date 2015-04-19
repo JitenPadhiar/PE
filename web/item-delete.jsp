@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
     </head>
     <body>
         <sql:setDataSource var="dbsource" driver="com.mysql.jdbc.Driver"

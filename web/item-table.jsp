@@ -17,7 +17,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Personal Expense Manager</title>
         <style>
              body {
                 background-image:url("BackgroundTULIP.jpg");
