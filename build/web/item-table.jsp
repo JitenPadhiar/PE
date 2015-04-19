@@ -19,6 +19,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
+             body {
+                background-image:url("BackgroundTULIP.jpg");
+            }
+            
             ul
             {
                 list-style-type:none;
@@ -68,28 +72,35 @@
                            url="jdbc:mysql://localhost/member"
                            user="root" 
                            password=""/>
-      
+
 
         <sql:query dataSource="${dbsource}" var="result">
-           SELECT * FROM item;
+            SELECT * FROM item 
+            union all
+            SELECT listid,item_name,price,SUM(price) as "total"
+            FROM item;
         </sql:query>
+
+
     <center>
         <form>
-            <div class="CSS_Table_Example" style="width:400px;height:400px;">
+            <div class="CSS_Table_Example" style="width:500px;height:400px;">
                 <table>
                     <tr> <td colspan="6">Product List</td> </tr>
                     <tr>
                         <td>ListId</td>
                         <td>Item_Name</td>
                         <td>Price</td>
-                        <td>Total</td>
-                        <td colspan="6">Action</td>
+                        <td> Total </td>
+                        <td colspan="5">Action</td>
+                
                     </tr>
+                    
+                        
                     <c:forEach var="row" items="${result.rows}">
                         <tr>
                             <td><c:out value="${row.listid}"/></td>
                             <td><c:out value="${row.item_name}"/></td>
-
                             <td><c:out value="${row.price}"/></td>
                             <td><c:out value="${row.total}"/></td>
                             <td><a href="item-update.jsp?listid=<c:out value="${row.listid}"/>">Update</a>
@@ -98,8 +109,11 @@
 
                         </tr>
                     </c:forEach>
+                  
                 </table>
             </div>
+
+
         </form>
         </br><a href="welcome.jsp">Go Home</a>
     </center>

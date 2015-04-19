@@ -15,6 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
        <sql:setDataSource var="dbsource" driver="com.mysql.jdbc.Driver"
                            url="jdbc:mysql://localhost/member"
                            user="root"  

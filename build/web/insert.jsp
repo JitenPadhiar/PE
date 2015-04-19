@@ -6,13 +6,17 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<link rel="stylesheet" href="table.css" type="text/css" />
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="table.css" type="text/css" />
         <title>JSP Page</title>
         <style>
+            body{
+                 background-image:url("canada_day_1.gif");
+            }
             #add{
                 margin-top: 10px;
                 margin-left: 550px;
@@ -37,7 +41,7 @@
             {
                 font-weight:bold;
                 color:#FFFFFF;
-                background-color:#98bf21;
+                background-color:red;
                 text-align:center;
                 padding:6px;
                 text-decoration:none;
@@ -59,7 +63,7 @@
         </ul>
     <center>
          <form action="item-add.jsp" method="post">
-          <div class="CSS_Table_Example" style="width:600px;height:150px;">
+          <div class="CSS_Table_Example" style="width:600px;height:250px;">
              <table>
                 
                     <tr>
@@ -68,11 +72,11 @@
                
                
                     <tr>
-                        <td>Product Name</td>
+                        <td>Item Name</td>
                         <td><input type="text" name="item_name"/></td>
                     </tr>
                     <tr>
-                        <td>Price</td>
+                        <td>Item Price</td>
                         <td><input type="text" name="price"/></td>
                     </tr>
                     <tr>
@@ -88,14 +92,11 @@
               </div>
         </form>
        
-         <font color="red"><c:if test="${not empty param.errMsg}">
-            <c:out value="${param.errMsg}" />
+        <font size="6px" color="#800000"><c:if test="${not empty param.errMsg}"></br>
+            <c:out value="${param.errMsg}" /></br></br>
             <a href="welcome.jsp">Go Back</a>
         </c:if></font>
-        <font color="green"><c:if test="${not empty param.susMsg}">
-            <c:out value="${param.susMsg}" />
-            <a href="welcome.jsp">Go Back</a>
-        </c:if></font>
+       
        
     </center>     
                 

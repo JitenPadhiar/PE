@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="table.css" type="text/css"/>
         <title>Welcome <%=session.getAttribute("name")%></title>  
         <style>
+            body {
+                background-image: url("money-manager-banner.jpg");
+            }
             ul
             {
                 list-style-type:none;
@@ -29,7 +32,7 @@
             {
                 font-weight:bold;
                 color:#FFFFFF;
-                background-color:#98bf21;
+                background-color:red;
                 text-align:center;
                 padding:6px;
                 text-decoration:none;
@@ -39,7 +42,10 @@
             {
                 background-color:#7A991A;
             }
-
+            #jit{
+                color:darkturquoise;
+                margin-top: 100px;
+            }
         </style>
         
     </head>  
@@ -52,18 +58,16 @@
         </ul>
 
         <form method="post"  action="welcome.jsp">
-                 <p>Hello,<%=session.getAttribute("name")%></p>
+                 <p id="jit"><font size="10">Welcome,<%=session.getAttribute("name")%></font></p>
         </form>
-       <center>               
-          <div class="CSS_Table_Example" style="width:600px;height:50px;">
-            <table> 
-                <td>
-                     <a href="insert.jsp">Insert Record</a>
-                     <a href="item-table.jsp">Display Record</a>
-                </td>
-            </table>
-         </div>                   
-     </center>
+             
+          
+           
+        <p id="jit"><a href="insert.jsp" style="background-color: blue"><font color="darkturquoise">Click Here to Store your Expenses and Price Here!</font></a></p>
+        <p id="jit"><a href="item-table.jsp" style="background-color: blue"><font color="darkturquoise">Click Here to view your Data</font></a></p>
+             
+                        
+   
 
     </body>  
 </html>

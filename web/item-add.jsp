@@ -33,19 +33,19 @@
 
     <sql:update dataSource="${dbsource}" var="result">
         
-        INSERT INTO item(item_name,price) VALUES (?,?);
+        INSERT INTO item(item_name,price,total) VALUES (?,?,?);
         <sql:param value="${param.item_name}" />
         <sql:param value="${param.price}" />
-        
+        <sql:param value="${param.total}" />
+
       
     </sql:update>
   
     <c:if test="${result>=1}">
-        <font size="5" color='green'> Congratulations ! Data inserted into table successfully.</font>
+        <font size="5" color='#FFFF00'>Data inserted successfully.</font>
 
         <c:redirect url="insert.jsp" >
-            <c:param name="susMsg" value="Congratulations ! Data inserted
-                     successfully." />
+            <c:param name="susMsg" value=" Data inserted successfully." />
         </c:redirect>
     </c:if> 
 
